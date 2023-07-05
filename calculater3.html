@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>calculater </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 50px ;
+            align-items: center;
+        }
+        .calc{
+            border: 1px solid black;
+            height: 450px;
+            width: 300px;
+            background-color: aquamarine;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+        
+        .btn{
+            margin: 7px;
+             width: 132px;
+            height: 54px;
+        }
+        input{
+            margin: 18px;
+            width: 100px;
+            height: 100px;
+            font-size: large;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="he">calculater level 2 task 1 :</h1>
+    <div class="calc">
+    <input id="a" placeholder="0">
+    <input id="b" placeholder="0">
+    <br>
+    <button id="b1" class="btn">+</button>
+    <button id="b2" class="btn">-</button>
+    <button id="b3" class="btn">x</button>
+    <button id="b4" class="btn">/</button>
+
+    <h2 id="h2"></h2>
+    </div>
+
+
+    
+</body>
+<script>
+    const a=document.getElementById("a");
+    const b=document.getElementById("b");
+    const add=document.getElementById("b1");
+    const sub=document.getElementById("b2");
+    const mul=document.getElementById("b3");
+    const div=document.getElementById("b4");
+
+    const h2=document.getElementById("h2");
+add.addEventListener("click",function () {
+        h2.innerText=`ANS: ${+a.value + +b.value}`;
+})
+sub.addEventListener("click",function () {
+    h2.innerText=`ANS:${+a.value - +b.value}`;
+})
+mul.addEventListener("click",function () {
+    h2.innerText=`ANS: ${+a.value * +b.value}`;
+})
+div.addEventListener("click",function () {
+    h2.innerText=`ANS: ${+a.value / +b.value}`;
+})
+
+
+</script>
+</html>
